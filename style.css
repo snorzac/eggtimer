@@ -173,7 +173,7 @@ body
 
   .container button
   {
-    color: black;
+    color: black !important;
   }
 
   .egg-btn img
