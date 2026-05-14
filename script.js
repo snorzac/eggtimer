@@ -19,6 +19,7 @@ function startTimer()
 {
     document.getElementById('detail-view').style.display = 'none';
     document.getElementById('timer-view').style.display = 'flex';
+    document.getElementById('timer-image').src = document.getElementById('egg-image').src;
 
     remainingSeconds = selectedMinutes * 60;
     isPaused = false;

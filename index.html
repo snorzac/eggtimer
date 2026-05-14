@@ -18,14 +18,14 @@
         <div class="container silkscreen-regular silkscreen-bold">
             <div id="selection-view">
                 <div class="row">
-                    <h1>egg timer</h1>
+                    <h1>🥚 egg timer 🥚</h1>
                 </div>
                 <div class="row">
-                    <p>choose your egg doneness!</p>
+                    <p style="text-align: center;">choose your egg doneness!</p>
                 </div>
-                <div class="row g-3 justify-content-center w-50">
+                <div class="button-grid">
                     <div class="col-6 d-flex justify-content-center">
-                        <button onclick="showDetail('half boiled', 4, 'ian.jpg', 'runny white, silky yolk')" class="egg-btn"><img src="ian.jpg" alt="half boiled egg"><p>half boiled</p></button>
+                        <button onclick="showDetail('half boiled', 0.01, 'ian.jpg', 'runny white, silky yolk')" class="egg-btn"><img src="ian.jpg" alt="half boiled egg"><p>half boiled</p></button>
                     </div>
                     <div class="col-6 d-flex justify-content-center">
                         <button onclick="showDetail('soft boiled', 6, 'ian2.jpg', 'set white, runny yolk')" class="egg-btn"><img src="ian2.jpg" alt="soft boiled egg"><p>soft boiled</p></button>
@@ -49,6 +49,7 @@
 
             <div id="timer-view" style="display: none;">
                 <h1 id="timer-egg-label"></h1>
+                <img id="timer-image" src="" alt="egg">
                 <h2 id="countdown">00:00</h2>
                 <button onclick="togglePause()" id="pause-btn">pause</button>
                 <button onclick="goBack('detail')">back</button>
@@ -57,7 +58,7 @@
             <div id="ready-view" style="display: none;">
                 <h1>your egg is ready!</h1>
                 <img id="ready-image" src="ian.jpg" alt="cooked egg">
-                <button onclick="goHome()">cook another egg</button>
+                <button onclick="goHome()"><p>okay!</p></button>
             </div>
         </div>
         <script src="https://www.w3schools.com/lib/w3.js"></script>

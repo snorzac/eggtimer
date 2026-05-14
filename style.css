@@ -3,7 +3,15 @@
   font-family: "Silkscreen", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5rem ;
+  font-size: 2rem ;
+}
+
+.silkscreen-regular h2
+{
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7rem ;
 }
 
 .silkscreen-regular p
@@ -11,7 +19,7 @@
   font-family: "Silkscreen", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.7rem;
+  font-size: 1.35rem;
 }
 
 .silkscreen-bold
@@ -28,11 +36,13 @@ body
 
 .container
 {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
+  overflow: hidden;
 }
 
 .egg-btn
@@ -40,16 +50,17 @@ body
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
-  padding: 10px;
+  width: 100%;
   background-color: #FDFD96;
   border: none;
+  padding: 5px;
 }
 
 .egg-btn img
 {
-  width: 220px;
-  height: 290px;
+  width: 200px;
+  height: 260px;
+  object-fit: contain;
 }
 
 .egg-btn p
@@ -58,22 +69,43 @@ body
   margin-top: 8px;
 }
 
+.button-grid
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 50%;
+  justify-content: center;
+  place-items: center;
+}
+
 #selection-view
 {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  gap: 10px;
 }
+
+/* #detail-view
+{
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+} */
 
 #detail-view, #timer-view
 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100%;
   width: 100%;
   font-size: 1.7rem;
 }
+
 
 #detail-view button
 {
@@ -82,11 +114,23 @@ body
   border: none;
 }
 
+#egg-description
+{
+  text-align: center;
+  padding: 20px;
+}
+
 #timer-view button
 {
   margin: 10px;
   background-color: #FDFD96;
   border: none;
+}
+
+#timer-image
+{
+  width: 250px;
+  height: 320px; 
 }
 
 #egg-image
@@ -103,12 +147,6 @@ body
   width: 100%;
 }
 
-#ready-view img
-{
-  width: 250px;
-  height: 320px;
-}
-
 #ready-view button
 {
   background-color: #FDFD96;
@@ -117,8 +155,31 @@ body
 
 #ready-image
 {
-  width: 10%;
-  max-width: 300px;
-  height: auto;
-  padding: 24px;
+  width: 250px;
+  height: 320px;
+}
+
+@media (max-width: 768px)
+{
+  .silkscreen-regular h1
+  {
+    font-size: 1.7rem;
+  }
+
+  .silkscreen-regular p
+  {
+    font-size: 1.4rem;
+  }
+
+  .egg-btn img
+  {
+    width: 170px;
+    height: 170px;
+  }
+
+  #egg-description
+  {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
 }
