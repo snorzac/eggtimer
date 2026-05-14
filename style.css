@@ -171,6 +171,11 @@ body
     font-size: 1.4rem;
   }
 
+  .container button
+  {
+    color: black;
+  }
+
   .egg-btn img
   {
     width: 170px;
