@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Egg Timer
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container silkscreen-regular silkscreen-bold">
+            <div id="selection-view">
+                <div class="row">
+                    <h1>egg timer</h1>
+                </div>
+                <div class="row">
+                    <p>choose your egg doneness!</p>
+                </div>
+                <div class="row g-3 justify-content-center w-50">
+                    <div class="col-6 d-flex justify-content-center">
+                        <button onclick="showDetail('half boiled', 4, 'ian.jpg', 'runny white, silky yolk')" class="egg-btn"><img src="ian.jpg" alt="half boiled egg"><p>half boiled</p></button>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center">
+                        <button onclick="showDetail('soft boiled', 6, 'ian2.jpg', 'set white, runny yolk')" class="egg-btn"><img src="ian2.jpg" alt="soft boiled egg"><p>soft boiled</p></button>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center">
+                        <button onclick="showDetail('medium boiled', 8, 'ian3.jpg', 'set white, jammy yolk')" class="egg-btn"><img src="ian3.jpg" alt="medium boiled egg"><p>medium boiled</p></button>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center">
+                        <button onclick="showDetail('hard boiled', 12, 'ian4.jpg', 'fully set white and yolk')" class="egg-btn"><img src="ian4.jpg" alt="hard boiled egg"><p>hard boiled</p></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detail-view" style="display: none;">
+                <h1 id="egg-label"></h1>
+                <img id="egg-image" src="" alt="egg">
+                <p id="egg-description"></p>
+                <button onclick="startTimer()">start</button>
+                <button onclick="goBack('selection')">back</button>
+            </div>
+
+            <div id="timer-view" style="display: none;">
+                <h1 id="timer-egg-label"></h1>
+                <h2 id="countdown">00:00</h2>
+                <button onclick="togglePause()" id="pause-btn">pause</button>
+                <button onclick="goBack('detail')">back</button>
+            </div>
+
+            <div id="ready-view" style="display: none;">
+                <h1>your egg is ready!</h1>
+                <img id="ready-image" src="ian.jpg" alt="cooked egg">
+                <button onclick="goHome()">cook another egg</button>
+            </div>
+        </div>
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <script>w3.includeHTML();</script>
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
