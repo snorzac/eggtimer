@@ -21,20 +21,20 @@
                     <h1>🥚 egg timer 🥚</h1>
                 </div>
                 <div class="row">
-                    <p style="text-align: center;">choose your egg doneness!</p>
+                    <p style="text-align: center;">pick your egg's doneness!</p>
                 </div>
                 <div class="button-grid">
                     <div class="col-6 d-flex justify-content-center">
-                        <button onclick="showDetail('half boiled', 0.01, 'ian.jpg', 'runny white, silky yolk')" class="egg-btn"><img src="ian.jpg" alt="half boiled egg"><p>half boiled</p></button>
+                        <button onclick="showDetail('half boiled', 5, 'half-boiled.webp', 'runny white, runny yolk')" class="egg-btn half-btn"><img src="half-boiled.webp" alt="half boiled egg"><p>half boiled</p></button>
                     </div>
                     <div class="col-6 d-flex justify-content-center">
-                        <button onclick="showDetail('soft boiled', 6, 'ian2.jpg', 'set white, runny yolk')" class="egg-btn"><img src="ian2.jpg" alt="soft boiled egg"><p>soft boiled</p></button>
+                        <button onclick="showDetail('soft boiled', 7, 'soft-boiled.webp', 'tender white, runny yolk')" class="egg-btn"><img src="soft-boiled.webp" alt="soft boiled egg"><p>soft boiled</p></button>
                     </div>
                     <div class="col-6 d-flex justify-content-center">
-                        <button onclick="showDetail('medium boiled', 8, 'ian3.jpg', 'set white, jammy yolk')" class="egg-btn"><img src="ian3.jpg" alt="medium boiled egg"><p>medium boiled</p></button>
+                        <button onclick="showDetail('medium boiled', 8, 'medium-boiled.webp', 'tender white, jammy yolk')" class="egg-btn medium-btn"><img src="medium-boiled.webp" alt="medium boiled egg"><p>medium boiled</p></button>
                     </div>
                     <div class="col-6 d-flex justify-content-center">
-                        <button onclick="showDetail('hard boiled', 12, 'ian4.jpg', 'fully set white and yolk')" class="egg-btn"><img src="ian4.jpg" alt="hard boiled egg"><p>hard boiled</p></button>
+                        <button onclick="showDetail('hard boiled', 10, 'hard-boiled.webp', 'solid white, solid yolk')" class="egg-btn"><img src="hard-boiled.webp" alt="hard boiled egg"><p>hard boiled</p></button>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
 
             <div id="timer-view" style="display: none;">
                 <h1 id="timer-egg-label"></h1>
-                <img id="timer-image" src="" alt="egg">
+                <img id="timer-image" src="waiting-gif.gif" alt="egg">
                 <h2 id="countdown">00:00</h2>
                 <button onclick="togglePause()" id="pause-btn">pause</button>
                 <button onclick="goBack('detail')">back</button>
@@ -57,7 +57,7 @@
 
             <div id="ready-view" style="display: none;">
                 <h1>your egg is ready!</h1>
-                <img id="ready-image" src="ian.jpg" alt="cooked egg">
+                <img id="ready-image" src="" alt="cooked egg">
                 <button onclick="goHome()"><p>okay!</p></button>
             </div>
         </div>

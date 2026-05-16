@@ -63,8 +63,19 @@ body
   object-fit: contain;
 }
 
+.half-btn img
+{
+  padding: 20px;
+}
+
+.medium-btn img
+{
+  padding: 30px;
+}
+
 .egg-btn p
 {
+  position: relative;
   margin: 0;
   margin-top: 8px;
 }
@@ -79,6 +90,7 @@ body
   place-items: center;
 }
 
+
 #selection-view
 {
   display: flex;
@@ -87,13 +99,6 @@ body
   width: 100%;
   gap: 10px;
 }
-
-/* #detail-view
-{
-  place-items: center;
-  align-items: center;
-  justify-content: center;
-} */
 
 #detail-view, #timer-view
 {
@@ -105,7 +110,6 @@ body
   width: 100%;
   font-size: 1.7rem;
 }
-
 
 #detail-view button
 {
@@ -129,14 +133,15 @@ body
 
 #timer-image
 {
-  width: 250px;
-  height: 320px; 
+  padding: 20px;
+  width: 500px;
+  height: 30%;
 }
 
-#egg-image
+#egg-image img
 {
-  width: 250px;
-  height: 320px;
+  width: 200px;
+  height: 260px;
 }
 
 #ready-view
@@ -153,10 +158,10 @@ body
   border: none;
 }
 
-#ready-image
+#ready-image img
 {
-  width: 250px;
-  height: 320px;
+  width: 200px;
+  height: 260px;
 }
 
 @media (max-width: 768px)
@@ -182,9 +187,25 @@ body
     height: 170px;
   }
 
+  .half-btn img
+  {
+    padding: 20px;
+  }
+
+  .medium-btn img
+  {
+    padding: 30px;
+  }
+
   #egg-description
   {
     font-size: 1.4rem;
     padding: 10px;
+  }
+
+  #timer-image
+  {
+    width: 90%;
+    height: 30%;
   }
 }
