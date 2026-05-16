@@ -30,8 +30,6 @@ function startTimer()
     clearInterval(interval)
     interval -= null;
 
-    playClickSound();
-
     document.getElementById('detail-view').style.display = 'none';
     document.getElementById('timer-view').style.display = 'flex';
 
