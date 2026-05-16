@@ -15,9 +15,14 @@ window.addEventListener('beforeunload', () =>
 
 function playClickSound()
 {
-    const sound = new Audio('pop-fx.m4a');
-    sound.volume = 1;
-    sound.play();
+
+    // only play the click sound on desktop
+    if (window.innerWidth > 768)
+    {
+        const sound = new Audio('pop-fx.m4a');
+        sound.volume = 1;
+        sound.play();
+    }
 }
 
 function showDetail(type, minutes, image, description)
