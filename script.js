@@ -2,6 +2,16 @@ let selectedMinutes = 0;
 let interval = null;
 let isPaused = false;
 let remainingSeconds = 0;
+let alarmSound = null;
+
+window.addEventListener('beforeunload', () =>
+{
+    if (alarmSound)
+    {
+        alarmSound.pause();
+        alarmSound = null;
+    }
+});
 
 function playClickSound()
 {
@@ -101,16 +111,28 @@ function goBack(destination)
 
 function showReady()
 {
-    playClickSound();
-
     document.getElementById('timer-view').style.display = 'none';
     document.getElementById('ready-view').style.display = 'flex';
     document.getElementById('ready-image').src = document.getElementById('egg-image').src;
+
+    // start looping alarm
+    alarmSound = new Audio('alarm-fx.mp3');
+    alarmSound.loop = true;
+    alarmSound.volume = 1;
+    alarmSound.play();
 }
 
 function goHome()
 {
     playClickSound();
+
+    // stop alarm when user clicks okay
+    if (alarmSound)
+    {
+        alarmSound.pause();
+        alarmSound.currentTime = 0;
+        alarmSound = null;
+    }
     
     document.getElementById('ready-view').style.display = 'none';
     document.getElementById('selection-view').style.display = 'flex';
